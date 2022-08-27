@@ -1,6 +1,13 @@
 import styled from 'styled-components'
 import React from 'react'
-import { disneyLogo } from "../../images/logo.svg"
+import disneyLogo  from "../../images/logo.svg"
+import house from '../../images/home-icon.svg'
+import search from '../../images/search-icon.svg'
+import watch from '../../images/watchlist-icon.svg'
+import original from '../../images/original-icon.svg'
+import movie from '../../images/movie-icon.svg'
+import series from '../../images/series-icon.svg'
+
 
 
 const Header = () => {
@@ -8,31 +15,31 @@ const Header = () => {
     return (
   
       <Nav>
-        <img src={disneyLogo} />
+        <img className='logo' src={disneyLogo} />
         <NavMenu>
           
           <a>
-            <img />
+            <img src={house} />
             <span>HOME</span>
           </a>
           <a>
-            <img />
+            <img src={search}/>
             <span>SEARCH</span>
           </a>
           <a>
-            <img />
+            <img src={watch}/>
             <span>WATCHLIST</span>
           </a>
           <a>
-            <img />
+            <img src={original}/>
             <span>ORIGINALS</span>
           </a>
           <a>
-            <img />
+            <img src={movie} />
             <span>MOVIES</span>
           </a>
           <a>
-            <img />
+            <img src={series} />
             <span>SERIES</span>
           </a>
           
@@ -50,6 +57,11 @@ const Header = () => {
     height: 70px;
     background-color: #090b13;
     display: flex;
+
+    .logo {
+        width: 80px;
+        padding: 10px;
+    }
     
     `
   
@@ -66,27 +78,28 @@ const Header = () => {
       cursor: pointer;
 
       img {
-        height: 20px;
+        height: 25px;
+        margin-right: 2px;
       }
 
       span {
-        font-size: 13px;
+        font-size: 16px;
         letter-spacing: 1.42px;
         position: relative;
 
-        &:after {
-          position: absolute;
-          content: "";
-          color: white;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: -6px;
-          opacity: 0;
-          transform: scaleX(0);
-          transform-origin: left center;
-          transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
-        }
+          &:after {
+            position: absolute;
+            content: "";
+            background: white;
+            height: 2px;
+            left: 0;
+            right: 0;
+            bottom: -3px;
+            opacity: 0;
+            transform: scaleX(0);
+            transform-origin: left center;
+            transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+          }
       }
       &:hover {
           span:after {
