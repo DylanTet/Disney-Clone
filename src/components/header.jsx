@@ -1,18 +1,18 @@
 import styled from 'styled-components'
 import React from 'react'
-import disneyLogo  from "../../images/logo.svg"
-import house from '../../images/home-icon.svg'
-import search from '../../images/search-icon.svg'
-import watch from '../../images/watchlist-icon.svg'
-import original from '../../images/original-icon.svg'
-import movie from '../../images/movie-icon.svg'
-import series from '../../images/series-icon.svg'
+import disneyLogo  from "../images/logo.svg"
+import house from '../images/home-icon.svg'
+import search from '../images/search-icon.svg'
+import watch from '../images/watchlist-icon.svg'
+import original from '../images/original-icon.svg'
+import movie from '../images/movie-icon.svg'
+import series from '../images/series-icon.svg'
 
 
 
 const Header = () => {
 
-    return (
+    return ( 
   
       <Nav>
         <img className='logo' src={disneyLogo} />
@@ -57,10 +57,11 @@ const Header = () => {
     height: 70px;
     background-color: #090b13;
     display: flex;
+    align-items: center;
+    padding: 0 36px;
 
     .logo {
         width: 80px;
-        padding: 10px;
     }
     
     `
@@ -68,7 +69,7 @@ const Header = () => {
   const NavMenu = styled.div`
     display: flex;
     flex: 1;
-    padding: 0 40px;
+    margin-left: 25px;
     align-items: center;
 
     a {
