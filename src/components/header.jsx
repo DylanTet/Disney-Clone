@@ -7,46 +7,49 @@ import watch from '../images/watchlist-icon.svg'
 import original from '../images/original-icon.svg'
 import movie from '../images/movie-icon.svg'
 import series from '../images/series-icon.svg'
+import { Outlet } from 'react-router-dom'
 
 
 
 const Header = () => {
 
     return ( 
-  
-      <Nav>
-        <img className='logo' src={disneyLogo} />
-        <NavMenu>
+      <div>
+        <Nav>
+          <img className='logo' src={disneyLogo} />
+          <NavMenu>
+            
+            <a>
+              <img src={house} />
+              <span>HOME</span>
+            </a>
+            <a>
+              <img src={search}/>
+              <span>SEARCH</span>
+            </a>
+            <a>
+              <img src={watch}/>
+              <span>WATCHLIST</span>
+            </a>
+            <a>
+              <img src={original}/>
+              <span>ORIGINALS</span>
+            </a>
+            <a>
+              <img src={movie} />
+              <span>MOVIES</span>
+            </a>
+            <a>
+              <img src={series} />
+              <span>SERIES</span>
+            </a>
+            
+          </NavMenu>
+          <ProfileImg />
           
-          <a>
-            <img src={house} />
-            <span>HOME</span>
-          </a>
-          <a>
-            <img src={search}/>
-            <span>SEARCH</span>
-          </a>
-          <a>
-            <img src={watch}/>
-            <span>WATCHLIST</span>
-          </a>
-          <a>
-            <img src={original}/>
-            <span>ORIGINALS</span>
-          </a>
-          <a>
-            <img src={movie} />
-            <span>MOVIES</span>
-          </a>
-          <a>
-            <img src={series} />
-            <span>SERIES</span>
-          </a>
-          
-        </NavMenu>
-        <ProfileImg />
-      
-      </Nav>
+        </Nav>
+        <Outlet />
+      </div>
       
     )
   }

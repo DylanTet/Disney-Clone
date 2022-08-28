@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import ImgSlider from "../../components/img-slider";
+import Movies from "../../components/movies";
 import Viewers from "../../components/viewers";
 import homeImage from '../../images/home-background.png'
 
@@ -11,6 +12,7 @@ const Home = () => {
         <Container>
             <ImgSlider />
             <Viewers />
+            <Movies />
         </Container>
     )
 }
